@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    
+
+    <script> 
+    function cifraDeCesar(deslocamento,mensagem) {
+
+        var palavras = [];
+        var palavrasAlteradas = "";
+
+        for (var i = 0; i < mensagem.length; i++){
+            palavras.push((mensagem.charCodeAt(i) + deslocamento)%126);
+            palavrasAlteradas += String.fromCharCode(palavras[i]);
+        }
+
+        return palavrasAlteradas;
+    }
+        let codigo = prompt("digite aqui o codigo");
+        let numero = parseInt(prompt("agora digite o numero de vezes a ser descifrado"));
+        alert(cifraDeCesar(numero, codigo));
+</script>
+</body>
+</html>
